@@ -22,11 +22,11 @@ header {
     display: flex;
     align-items: center;
 }
-.icon {
+.logo svg {
     height: 50px;
     width: 50px;
 }
-.text {
+.logo span {
     font-size: 2.5rem;
     font-weight: bold;
     cursor: default;
@@ -48,6 +48,7 @@ header {
 }
 
 main {
+    height: 300px;
     border-radius: 10px;
     background: #fcfbf7;
     display: grid;
@@ -55,11 +56,68 @@ main {
     padding: 40px;
     gap: 10px;
 }
-.model {
-    background: grey;
+.card {
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
 }
-
-
+/* //////////////////////////// */
+.model {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: end;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    transition: .2s;
+}
+.model > div:nth-child(1) {
+    display: flex;
+    gap: 26px;
+}
+.closeBtn {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    rotate: 45deg;
+}
+.overlay-active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease;
+    pointer-events: none;
+    opacity: 1;
+}
+.read {
+    font-size: 1.2rem;
+}
+.addBook {
+    height: 40px;
+    width: 85%;
+    color: white;
+    background: #0376b8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* ///////////////////// */
 .addBtn {
     height: 80px;
     width: 80px;
