@@ -48,7 +48,7 @@ header {
 }
 
 main {
-    height: 300px;
+    /* height: 300px; */
     border-radius: 10px;
     background: #fcfbf7;
     display: grid;
@@ -63,7 +63,24 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    gap: 5px;
+    padding: 5px;
     font-size: 2rem;
+}
+.edit {
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+    background: #0376b8;
+    cursor: pointer;
+}
+.remove {
+    text-align: center;
+    width: 80%;
+    border-radius: 10px;
+    background: red;
+    cursor: pointer;
 }
 /* //////////////////////////// */
 .model {
@@ -136,6 +153,6 @@ footer {
     font-size: 1.2rem;
     bottom: 10px;
     width: 100%;
-    position: absolute;
+    padding: 20px;
     text-align: center;
 }
