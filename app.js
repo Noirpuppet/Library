@@ -26,11 +26,10 @@ document.querySelector('.closeBtn')
 let library = [];
 
 class Book {
-    constructor (title, author, page, read) {
+    constructor (title, author, page) {
         this.title = title;
         this.author = author;
         this.page = page;
-        this.read = read;
     }
 }
 
@@ -40,10 +39,9 @@ const addBookToLibrary = (e) => {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const page = document.getElementById('page').value;
-    const read = document.getElementById('read').checked;
     document.querySelector('form').reset();
 
-    const books = new Book(title, author, page, read);
+    const books = new Book(title, author, page);
     library.push(books);
     displayBook();
     console.log(library)
