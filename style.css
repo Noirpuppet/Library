@@ -48,7 +48,6 @@ header {
 }
 
 main {
-    /* height: 300px; */
     border-radius: 10px;
     background: #fcfbf7;
     display: grid;
@@ -61,25 +60,21 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-evenly;
     gap: 5px;
     padding: 5px;
     font-size: 2rem;
 }
-.edit {
-    text-align: center;
-    width: 80%;
-    border-radius: 10px;
-    color: white;
-    background: #0376b8;
-    cursor: pointer;
+.card div {
+    padding:0 0 0 20px;
 }
 .remove {
     text-align: center;
-    width: 80%;
+    padding: 10px;
+    width: 90%;
     border-radius: 10px;
-    background: red;
+    background: rgb(118, 118, 118,0.5);
     cursor: pointer;
 }
 /* //////////////////////////// */
@@ -125,6 +120,7 @@ main {
 .read {
     font-size: 1.2rem;
 }
+
 .addBook {
     height: 40px;
     width: 85%;

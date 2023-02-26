@@ -63,19 +63,29 @@ const displayBook = () => {
         const newCard = document.createElement('div');
         newCard.classList.add('card');
         newCard.innerHTML = `<div>${book.title}</div>
-                            <div>${book.author}</div>
-                            <div>${book.page} pages</div>
-                            <div>${book.read}</div>`;
+                            <div>By ${book.author}</div>
+                            <div>Page ${book.page}</div>`;
 
-        const newEdit = document.createElement('div');
-        newEdit.innerText = 'Edit';
-        newEdit.classList.add('edit');
         const newRemove = document.createElement('div');
         newRemove.innerText = 'Remove';
         newRemove.classList.add('remove');
-
+        
         addCard.appendChild(newCard);
-        newCard.appendChild(newEdit);
         newCard.appendChild(newRemove);
+        
+        //remove book from array
+        newRemove.addEventListener('click', () => {
+            library.splice(library.indexOf(book), 1);
+        });
     });
 };
+//remove book from UI
+const deleteBook = (el) => {
+    if(el.classList.contains('remove')) {
+        el.parentElement.remove();
+    };
+};
+
+document.querySelector('#cardBox').addEventListener('click', (e) => {
+    deleteBook(e.target);
+});
